@@ -8,7 +8,7 @@ import adminRoutes from '../main/admin/adminRoute';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/home', component: FormTemplate },
+        { path: '', component: FormTemplate },
         ...appAuthRoutes, ...controllerRoutes, ...adminRoutes
 
 
