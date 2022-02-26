@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
     --primary-color:#192a6b;
-    --primary-font-roboto-slab: 'Roboto Slab', serif;;
-    --primary-font-roboto: 'Roboto', sans-serif,
+    --secondary-color:#192a6b;
+    --tertiary-color:#6868ac;
+    --extra-color:#ebebf4;
+    --font-family-roboto-slab: 'Roboto Slab', serif;
+    --font-family-roboto: 'Roboto', sans-serif;
+   
     }
-*{
+    
+
+*,body{
     padding: 0;
     margin: 0;
-    /* font-family: var(--primary-font-roboto); */
-}
+    font-family:var(--font-family-roboto);
+} 
+
+
+h1,h2,h3,h4,h6{color: var(--primary-color);}
+a,button{font-family: var(--font-family-roboto-slab) !important;}
+p,label,input,a{color: var(--tertiary-color);}
