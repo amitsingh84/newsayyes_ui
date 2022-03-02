@@ -1,5 +1,6 @@
 <template>
-    <div>controll Login changes</div>
+    <div>controll Login </div>
+    <div>Login Page</div>
 </template>
 
 <script>
