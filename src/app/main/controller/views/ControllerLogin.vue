@@ -73,11 +73,7 @@ export default {
 };
 </script>
 <style scoped>
-.logo {
-  margin-bottom: 0;
-  font-size: 1.7rem;
-  font-weight: 900;
-}
+
 .controllerLoginForm {
   height: calc(100vh - 87px);
 }

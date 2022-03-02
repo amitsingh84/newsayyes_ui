@@ -20,3 +20,35 @@
 h1,h2,h3,h4,h6{color: var(--primary-color);}
 a,button{font-family: var(--font-family-roboto-slab) !important;}
 p,label,input,a{color: var(--tertiary-color);}
+
+.imageAvatar img {
+    width: 40px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+.showSettingStyle {
+    position: absolute;
+    right: 0;
+    width: 17rem;
+    top: 80px;
+    background: #192a6b;
+  }
+  .showSettingStyle p {
+      margin-bottom: 2px;
+      color: #fff;
+      font-family: var(--font-family-roboto-slab);
+  }
+  .showSettingStyle .container-fluid {
+      padding-top: 10px;
+      padding-bottom: 17px;
+  }
+.imageAvatar {
+    text-align: right;
+}
+.logo {
+    margin-bottom: 0;
+    font-size: 1.7rem;
+    font-weight: 900;
+  }
+  

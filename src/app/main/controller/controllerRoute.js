@@ -6,6 +6,7 @@ import ControllerDashboard from "./views/ControllerDashboard.vue"
 import ControllerDatasubject from "./views/ControllerDatasubject.vue"
 import ControllerNewForm from "./views/ControllerNewForm.vue"
 import ControllerRegister from "./views/ControllerRegister.vue"
+import ControllerAllForm from "./views/ControllerAllForm.vue"
 const controllerRoutes=[{
     path:"/controller", component:AppController,
     children:[
@@ -24,9 +25,9 @@ const controllerRoutes=[{
         {
             path:'register',component:ControllerRegister, name:'controller Register'
         },
-        // {
-        //     path:'alldatasubject',component:ControllerDatasubject
-        // },
+        {
+            path:'allforms',component:ControllerAllForm
+        },
         // {
         //     path:'alldatasubject',component:ControllerDatasubject
         // },

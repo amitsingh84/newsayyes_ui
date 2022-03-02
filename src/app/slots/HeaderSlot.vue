@@ -12,7 +12,7 @@ export default {};
 <style scoped>
 .Header_conatiner {
   background-color: #192a6b;
-  min-height: 70px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   color: #fff;
