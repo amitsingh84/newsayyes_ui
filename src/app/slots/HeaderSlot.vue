@@ -16,6 +16,9 @@ export default {};
   display: flex;
   align-items: center;
   color: #fff;
+  position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 .Header_conatiner a {
   color: #fff;

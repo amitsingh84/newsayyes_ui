@@ -1,54 +1,33 @@
 <template>
   <div class="controllerDashboard">
-    <header-slot>
-      <div class="row">
-        <div class="col-6">
-          <p class="logo" style="color: #fff">YesOrNo</p>
-        </div>
-        <div class="col-6">
-          <div class="imageAvatar text-right">
-            <img
-              @click="showSetting"
-              src="../../../../assets/imgs/person.png"
-              alt=""
-            />
-            <div v-if="showData" class="showSettingStyle">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-3">
-                    <img src="../../../../assets/imgs/person.png" alt="" />
-                  </div>
-                  <div class="col-9"><p>Hello, franklin</p></div>
-                </div>
-                <div class="bottomSetting">
-                  <p>Account Setting</p>
-                  <p>Logout</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header-slot>
+    <header-nav/>
     <div class="controllerDashboardBody">
       <controller-side-nave></controller-side-nave>
 
-      <dashboard-slot> data subject</dashboard-slot>
+      <dashboard-slot> 
+        <div class="allDataSubject">
+          <search-form />
+        </div>
+      </dashboard-slot>
     </div>
   </div>
 </template>
 
 <script>
 // import LeftSide from "../../../slots/LeftSide.vue";
-import HeaderSlot from "../../../slots/HeaderSlot.vue";
+// import HeaderSlot from "../../../slots/HeaderSlot.vue";
 import ControllerSideNave from "../../../shared/components/ControllerSideNave.vue";
 import DashboardSlot from "../../../slots/DashboardSlot.vue";
+import HeaderNav from '../../../shared/components/HeaderNav.vue';
+import SearchForm from '../components/SearchForm.vue';
 export default {
   components: {
-    HeaderSlot,
+    // HeaderSlot,
     // LeftSide,
     ControllerSideNave,
     DashboardSlot,
+    HeaderNav,
+    SearchForm,
   },
 
   data() {

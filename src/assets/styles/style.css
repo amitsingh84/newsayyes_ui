@@ -2,6 +2,7 @@
 :root {
     --primary-color:#192a6b;
     --secondary-color:#192a6b;
+    --secondary-color-opacity:#192a6b80;
     --tertiary-color:#6868ac;
     --extra-color:#ebebf4;
     --font-family-roboto-slab: 'Roboto Slab', serif;
@@ -14,11 +15,13 @@
     padding: 0;
     margin: 0;
     font-family:var(--font-family-roboto);
+    font-size: 10px;
 } 
 
 
 h1,h2,h3,h4,h6{color: var(--primary-color);}
-a,button{font-family: var(--font-family-roboto-slab) !important;}
+a,button{font-family: var(--font-family-roboto-slab) !important; }
+a{color: var(--tertiary-color);}
 p,label,input,a{color: var(--tertiary-color);}
 
 .imageAvatar img {
@@ -48,7 +51,16 @@ p,label,input,a{color: var(--tertiary-color);}
 }
 .logo {
     margin-bottom: 0;
-    font-size: 1.7rem;
+    font-size: 3rem;
     font-weight: 900;
   }
   
+
+
+  .solidBtn{
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 10px 30px;
+      border-radius: 7px;
+      font-size: 1.5rem;
+  }
