@@ -60,7 +60,8 @@ p,label,input,a{color: var(--tertiary-color);}
   .solidBtn{
       background-color: var(--primary-color);
       color: #fff;
-      padding: 10px 30px;
+      padding: 8px 28px;
       border-radius: 7px;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      margin-top: 10px;
   }

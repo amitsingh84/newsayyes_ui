@@ -1,32 +1,42 @@
 <template>
   <div class="controllerDashSearch">
     <div class="controllerSearchRow">
-      <div>
+      <div v-if="id != 0">
         <a href="#" class="solidBtn">Back</a>
       </div>
-      <div class="userDetails"><p>User Details</p></div>
-      <div class="searchOptions"><span
+      <div v-if="id != 0" class="userDetails"><p>User Details</p></div>
+      <div class="searchOptions">
+        <span
           ><img src="../../../../assets/imgs/search.png" alt="search" />
           <input
             type="search"
             name="controllerSearch"
             id="controllerSearch"
             placeholder="Search in My Froms"
-        /></span></div>
+        /></span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      data: "",
+    };
+  },
+  props: ["id"],
+};
 </script>
 <style scoped>
 .controllerSearchRow {
   display: flex;
   padding: 8px 17px 8px 10px;
+  align-items: center;
 }
 .controllerSearchRow > div {
-    flex: 1;
+  flex: 1;
 }
 
 .controllerSearchRow input {
@@ -52,10 +62,17 @@ export default {};
   position: relative;
 }
 .userDetails p {
-    text-align: center;
+  text-align: center;
 }
-.searchOptions { 
-    margin-left: auto;
-    text-align: right;
+.searchOptions {
+  margin-left: auto;
+  text-align: right;
+}
+.userDetails p {
+  margin-bottom: 0;
+  font-size: 1.84rem;
+  color: var(--primary-color);
+  font-family: var(--font-family-roboto-slab);
+  font-weight: 700;
 }
 </style>
