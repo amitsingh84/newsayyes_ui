@@ -7,6 +7,7 @@ import ControllerDatasubject from "./views/ControllerDatasubject.vue"
 import ControllerNewForm from "./views/ControllerNewForm.vue"
 import ControllerRegister from "./views/ControllerRegister.vue"
 import ControllerAllForm from "./views/ControllerAllForm.vue"
+import ViewDataSubjectDetails from "./views/ViewDataSubjectDetails.vue"
 const controllerRoutes=[{
     path:"/controller", component:AppController,
     children:[
@@ -27,6 +28,9 @@ const controllerRoutes=[{
         },
         {
             path:'allforms',component:ControllerAllForm
+        },
+        {
+            path:'show-detail',component:ViewDataSubjectDetails
         },
         // {
         //     path:'alldatasubject',component:ControllerDatasubject

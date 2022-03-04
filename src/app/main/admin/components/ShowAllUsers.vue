@@ -1,7 +1,7 @@
 <template>
      <div class="allUserData">
                   <div class="allDataSubjectCounter">
-                    <p>02</p>
+                    <p>230</p>
                     <p class="allDataSubjectName">Users</p>
                   </div>
                   <div class="dataSubjectImg">
@@ -12,7 +12,33 @@
                     />
                   </div>
 
-                  <div class="d-flex align-items-end">
+                  <div class="d-flex align-items-end mb-4">
+                    <div class="DataSubjectCounter">
+                      <p>02</p>
+                      <p class="DataSubjectCounterDesc">Data Subjects</p>
+                    </div>
+
+                    <div class="allUserImg">
+                      <img
+                        src="../../../../assets/imgs/user2.png"
+                        alt="user2"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-end mb-4">
+                    <div class="DataSubjectCounter">
+                      <p>02</p>
+                      <p class="DataSubjectCounterDesc">Data Subjects</p>
+                    </div>
+
+                    <div class="allUserImg">
+                      <img
+                        src="../../../../assets/imgs/user2.png"
+                        alt="user2"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-end mb-4">
                     <div class="DataSubjectCounter">
                       <p>02</p>
                       <p class="DataSubjectCounterDesc">Data Subjects</p>
@@ -34,11 +60,12 @@ export default {
 }
 </script>
 <style scoped>
+
 .allUserData {
-  background: #f4f4f9;
+  background: #fff;
   margin-top: 11px;
   border-radius: 15px;
-  padding: 30px;
+  padding-top: 30px;
   height: calc(100vh - 155px);
   margin-left: 1rem;
   /* margin-right: 2.4rem;  */
@@ -48,7 +75,7 @@ export default {
 }
 
 .allDataSubjectCounter p {
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--primary-color);
   margin-bottom: 0;
@@ -56,11 +83,11 @@ export default {
   font-family: var( --font-family-roboto-slab);
 }
 p.allDataSubjectName {
-  font-size: 2.1rem;
+  font-size: 1.7rem;
 }
 .dataSubjectImg {
   text-align: center;
-  margin: 48px 0;
+  margin: 39px 0;
 }
 .dataSubjectImg img {
   width: 84px;
@@ -86,7 +113,7 @@ p.DataSubjectCounterDesc {
 }
 .allUserImg {
   display: flex;
-  justify-content: right;
-  flex: 0.7;
+  /* justify-content: right; */
+  flex: 0.5;
 }
 </style>

@@ -1,17 +1,28 @@
 <template>
-  <div class="Header_conatiner">
-    <div class="container-fluid">
+  <div class="Header_conatiner" :style="bgColor ? `background-color:${bgColor}`:`background-color:${'var(--primary-color)'}`">
+    <div class="container-fluid" >
+     
       <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      // bgColo:true
+    }
+  },
+  props:['bgColor'],
+  mounted() {
+    console.log(this.bgColor)
+  },
+};
 </script>
 <style scoped>
 .Header_conatiner {
-  background-color: #192a6b;
+  /* background-color: #192a6b; */
   min-height: 80px;
   display: flex;
   align-items: center;

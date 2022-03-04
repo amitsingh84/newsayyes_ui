@@ -25,14 +25,24 @@
                 <td>Hany</td>
                 <td>johny49@gmail.com</td>
                 <td>+49-12345678</td>
-                <td class="rightBorder"></td>
+                <td class="rightBorder">
+                  <p><router-link to="/controller/show-detail"><img src="../../../../assets/imgs/eye.png" alt="eye" /></router-link><img
+                    src="../../../../assets/imgs/delete.png"
+                    alt="delete"
+                  /></p>
+                </td>
               </tr>
               <tr>
                 <th scope="row">John</th>
                 <td>Hany</td>
                 <td>johny49@gmail.com</td>
                 <td>+49-12345678</td>
-                <td class="rightBorder"></td>
+                <td class="rightBorder">
+                  <p><img src="../../../../assets/imgs/eye.png" alt="eye" /><img
+                    src="../../../../assets/imgs/delete.png"
+                    alt="delete"
+                  /></p>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -122,4 +132,14 @@ table.table {
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
 }
+td.rightBorder img {
+  background: #192a6b;
+  margin: 0 5px;
+  padding: 6px;
+  width: 24px;
+  border-radius: 6px;
+  
+}
+td.rightBorder p{visibility: hidden;margin-bottom: 0;}
+.allDataSubjectTable tbody tr:hover .rightBorder p{visibility: visible;}
 </style>
