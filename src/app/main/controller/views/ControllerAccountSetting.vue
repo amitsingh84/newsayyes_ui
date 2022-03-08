@@ -1,3 +1,3 @@
 <template>
-    <p>Account setting</p>
+    <p>Account settingsdfds</p>
 </template>
