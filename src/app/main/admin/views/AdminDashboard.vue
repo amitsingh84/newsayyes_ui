@@ -67,31 +67,31 @@
                 <div class="allUserVisitor">
                   <div class="userVisitorRow">
                     <div class="allVerifiedUser">
-                      <img src="../../../../assets/imgs/folder.png" alt="" />
+                      <img src="../../../../assets/imgs/admin/security.png" alt="" />
                       <h4>Verified User</h4>
                       <p>200</p>
                     </div>
                     <div class="allVerifiedUser">
                       <div class="allVerifiedUser">
-                        <img src="../../../../assets/imgs/folder.png" alt="" />
-                        <h4>Verified User</h4>
-                        <p>200</p>
+                        <img src="../../../../assets/imgs/admin/user.png" alt="" />
+                        <h4>Login User</h4>  
+                        <p>130</p>
                       </div>
                     </div>
                   </div>
                   <div class="userVisitorRow">
                     <div class="allVerifiedUser">
-                      <div class="allVerifiedUser">
-                        <img src="../../../../assets/imgs/folder.png" alt="" />
-                        <h4>Verified User</h4>
-                        <p>200</p>
+                      <div class="allVerifiedUser">                                                                                                                                                                                                                                                                                                                                                                                        
+                        <img src="../../../../assets/imgs/admin/bluestar.png" alt="" />
+                        <h4>Rating</h4>
+                        <p>5</p>
                       </div>
                     </div>
                     <div class="allVerifiedUser">
                       <div class="allVerifiedUser">
-                        <img src="../../../../assets/imgs/folder.png" alt="" />
-                        <h4>Verified User</h4>
-                        <p>200</p>
+                        <img src="../../../../assets/imgs/admin/visitors.png" alt="" />
+                        <h4>Visitors</h4>
+                        <p>6K</p>
                       </div>
                     </div>
                   </div>
@@ -128,19 +128,18 @@ export default {
 
 .allUnpainFormImg img {
   width: 30px;
-  
 }
 .allFormAndPlanDataRow {
   display: flex;
-  gap: 30px;
+  gap: 18px;
 }
 
 .allFormAndPlanDataRow > div {
   flex: 1;
   background: #fff;
   border-radius: 7px;
-  padding: 24px;
-  margin-bottom: 30px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
 }
 
 .allFromStyle {
@@ -156,6 +155,7 @@ export default {
 
 .allUnpainFormTitleNumber h4 {
   font-size: 2rem;
+  font-weight: 800;
 }
 
 .allUnpainFormImg {
@@ -167,8 +167,9 @@ export default {
 
 .allUnpainFormTitleNumber p {
   margin-bottom: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #192a6b;
+  font-weight: 700;
 }
 .allFormAndPlanData {
   margin-top: 12px;
@@ -176,27 +177,38 @@ export default {
   margin-left: 20px;
 }
 .allVerifiedUser img {
-    width: 30px;
-    margin-bottom: 14px
+  width: 30px;
+  margin-bottom: 14px;
 }
 .allUserVisitorAndchart > div {
-    flex: 1;
+  flex: 1;
 }
 .allUserVisitorAndchart {
-    display: flex;
+  display: flex;
+  gap: 18px;
+  margin-right: 30px;
+  margin-left: 20px;
 }
 .userVisitorRow > div {
-    flex: 1;
-    background: #fff;
-    margin-bottom: 19px;
-    border-radius: 8px;
-    padding: 19px 10px;
+  flex: 1;
+  background: #fff;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  padding: 11px 10px;
 }
 .userVisitorRow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 19px;
+}
+.allVerifiedUser p {
+    color: #192a6b;
+    font-size: 13px;
+    font-weight: 800;
+}
+.allVerifiedUser h4 {
+    font-weight: 800;
 }
 </style>

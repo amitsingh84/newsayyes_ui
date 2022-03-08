@@ -1,0 +1,4 @@
+$('.table').DataTable({
+    responsive: true,
+    
+});

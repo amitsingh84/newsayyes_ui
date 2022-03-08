@@ -10,30 +10,30 @@
        <div class="adminUrlLink">
            <div class="">
         <router-link to="/admin/dashboard"
-          ><img src="../../../../assets/imgs/dashboard.png" />
+          ><img src="../../../../assets/imgs/admin/dashboard.png" />
           Dashboard</router-link
         >
       </div>
       <div class="">
-        <router-link to="/admin/dashboar"
-          ><img src="../../../../assets/imgs/dashboard.png" />
+        <router-link to="/admin/forms"
+          ><img src="../../../../assets/imgs/admin/menu.png" />
           Forms</router-link
         >
         <div class="">
-        <router-link to="/admin/dashboar"
-          ><img src="../../../../assets/imgs/dashboard.png" />
+        <router-link to="/admin/all-users"
+          ><img src="../../../../assets/imgs/admin/group.png" />
           Users</router-link
         >
       </div>
       <div class="">
-        <router-link to="/admin/dashboar"
-          ><img src="../../../../assets/imgs/dashboard.png" />
+        <router-link to="/admin/all-plans"
+          ><img src="../../../../assets/imgs/admin/pricing.png" />
           Plans</router-link
         >
       </div>
       <div class="">
         <router-link to="/admin/dashboar"
-          ><img src="../../../../assets/imgs/dashboard.png" />
+          ><img src="../../../../assets/imgs/admin/userblue.png" />
           Act as a Controller</router-link
         >
       </div>
@@ -50,7 +50,10 @@
 </template>
 
 <script>
-export default {};
+export default {
+ 
+   
+};
 </script>
 <style scoped>
 .adminSideNav {
