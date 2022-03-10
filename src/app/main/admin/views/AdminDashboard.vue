@@ -96,7 +96,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="allUserChart"></div>
+                <div class="allUserChart">
+                  <testing-chart/>
+                </div>
               </div>
             </div>
           </div>
@@ -109,10 +111,20 @@
 <script>
 import DashboardSlot from "../../../slots/DashboardSlot.vue";
 import HeaderSlot from "../../../slots/HeaderSlot.vue";
+import TestingChart from '../../controller/components/TestingChart.vue';
 import adminSideNav from "../components/adminSideNav.vue";
 import ShowAllUsers from "../components/ShowAllUsers.vue";
 export default {
-  components: { adminSideNav, HeaderSlot, DashboardSlot, ShowAllUsers },
+  components: { adminSideNav, HeaderSlot, DashboardSlot, ShowAllUsers, TestingChart },
+  data() {
+    return {
+      chartData: {
+        Books: 24,
+        Magazine: 30,
+        Newspapers: 10
+      }
+    };
+  }
 };
 </script>
 <style scoped>

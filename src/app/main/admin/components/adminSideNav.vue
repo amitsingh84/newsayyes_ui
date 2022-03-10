@@ -32,7 +32,7 @@
         >
       </div>
       <div class="">
-        <router-link to="/admin/dashboar"
+        <router-link to="/admin/as-controller"
           ><img src="../../../../assets/imgs/admin/userblue.png" />
           Act as a Controller</router-link
         >

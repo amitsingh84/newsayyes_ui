@@ -5,8 +5,8 @@
     <dashboard-slot>
       <admin-search title="Manage Users" />
       <div class="allFromsTable">
-        <testing-table :tables="tableData" :tablesHead="tableHead"/>
-        <!-- <admin-table :tables="tableData" :tablesHead="tableHead"/> -->
+        <!-- <testing-table :tables="tableData" :tablesHead="tableHead"/> -->
+        <admin-table :tables="tableData" :tablesHead="tableHead"/>
         <!-- <table id="example" class="display" style="width:100%">
             <thead>
             <tr>
@@ -59,16 +59,16 @@ import DashboardSlot from "../../../slots/DashboardSlot.vue";
 import HeaderSlot from "../../../slots/HeaderSlot.vue";
 import AdminSearch from "../components/adminSearch.vue";
 import adminSideNav from "../components/adminSideNav.vue";
-import TestingTable from '../components/TestingTable.vue';
-// import AdminTable from '../components/AdminTable.vue';
+// import TestingTable from '../components/TestingTable.vue';
+import AdminTable from '../components/AdminTable.vue';
 export default {
   components: {
     DashboardSlot,
     HeaderSlot,
     adminSideNav,
     AdminSearch,
-    TestingTable,
-    // AdminTable,
+    // TestingTable,
+    AdminTable,
   },
   data() {
     return {

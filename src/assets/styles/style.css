@@ -4,7 +4,7 @@
     --secondary-color:#6868ac;
     --secondary-color-opacity:#192a6b80;
     --tertiary-color:#a9a9cf;
-    --extra-color:#ebebf4;
+    --extra-color:#ebebf4; 
     --font-family-roboto-slab: 'Roboto Slab', serif;
     --font-family-roboto: 'Roboto', sans-serif;
    
@@ -71,6 +71,7 @@ p,label,input,a{color: var(--tertiary-color);}
       border-radius: 7px;
       font-size: 1.4rem;
       margin-top: 10px;
+      display: block;
   }
   .solidBtn:hover,.solidBackBtn:hover{
       color: #fff;
