@@ -39,7 +39,7 @@ export default {
         //       },
         //     },
         //   },
-        },
+        }, 
       },
       data: {
         labels: ["Jan", "Feb", "Mar", "Apr","May","june"],
