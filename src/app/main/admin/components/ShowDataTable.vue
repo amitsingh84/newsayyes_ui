@@ -1,7 +1,7 @@
 <template>
   <div class="showAllDataTable">
-     
-    <table id="alldata" class="display" style="width: 100%">
+     <div class="table-responsive">
+    <table id="alldata" class="display" >
       <thead>
         <tr>
           <th><input type="checkbox" name="check" id="checkAll" /></th>
@@ -23,15 +23,15 @@
         </tr>
       </tbody>
     </table>
-     
+     </div>
   </div>
 </template>
 <script>
 import "bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min.js";
 //Datatable Modules
-import "datatables.net-dt/js/dataTables.dataTables";
-import "datatables.net-dt/css/jquery.dataTables.min.css";
+import "datatables.net-bs5/js/dataTables.bootstrap5.min";
+import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
 import $ from "jquery";
 export default {
   components: {},
@@ -96,7 +96,7 @@ export default {
         "scrollX": true,
         scrollCollapse: true,
         lengthMenu: [[6, 20, 30, -1], [6, 20, 30, "All"]],
-        responsive: true
+        // responsive: true
          
         
   
@@ -170,7 +170,5 @@ tbody td {
       min-width: 10px !important;
        
     }
-    th.sorting.sorting_asc,td.sorting_1 {
-    /* min-width: 20px !important; */
-}
+  
 </style>

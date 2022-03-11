@@ -77,7 +77,7 @@ export default {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
 }
 .recentFromColRow {
     flex: 1;

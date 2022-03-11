@@ -5,9 +5,9 @@
     --secondary-color-opacity:#192a6b80;
     --tertiary-color:#a9a9cf;
     --extra-color:#ebebf4; 
+    --border-color:#ddd;
     --font-family-roboto-slab: 'Roboto Slab', serif;
     --font-family-roboto: 'Roboto', sans-serif;
-   
     }
     
 
@@ -76,3 +76,63 @@ p,label,input,a{color: var(--tertiary-color);}
   .solidBtn:hover,.solidBackBtn:hover{
       color: #fff;
   }
+
+  /* table style */
+  div#alldata_length label{
+    font-size: 1.3rem;
+}
+div#alldata_length label{
+    font-size: 1.3rem;
+}
+div#alldata_paginate a {
+    color: #000 !important;
+}
+    div#alldata_paginate a {
+        color: #000 !important;
+        font-size: 1.1rem;
+    }
+div#alldata_paginate >span > a.paginate_button.current,div#alldata_paginate >span > a:hover{
+    background: #192a6b;
+    border-color: #192a6b;
+    color: #fff !important;
+}
+table.dataTable tbody div#alldata_length {
+    font-size: 1.7rem !important;
+    color: #000;
+}
+.dataTables_wrapper .dataTables_length select, .dataTables_wrapper  div#alldata_length label, div#alldata_filter label,div#alldata_info  {
+    font-size: 1.3rem;
+    color: #000;
+    font-family: var(--font-family-roboto-slab);
+}
+ 
+div#alldata_paginate a {
+    border: 1px solid #a0a5c5bd;
+}
+.dataTables_wrapper.no-footer .dataTables_scrollBody{
+    border-bottom: 1px solid #ddd !important
+    }
+    .showAllDataTable .dataTables_scroll,.showAllDataTable div#alldata_length {
+        margin-bottom: 14px;
+    }
+    div#alldata_paginate a:hover {
+        color: #fff !important;
+        font-size: 1.1rem;
+        background: none;
+        background-color: var(--primary-color);
+    }
+   
+    .dataTables_scroll {
+        /* overflow-x: scroll; */
+        -webkit-overflow-scrolling: touch
+    }
+    .dataTables_scrollHead,.dataTables_scrollBody{
+        overflow: visible !important;
+      }
+      .dataTables_scroll{
+       /* overflow-y: clip;  */
+    }
+    div#alldata_paginate li.paginate_button.page-item.active a {
+        background-color: #192a6b;
+        color: #fff !important;
+    }

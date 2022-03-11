@@ -108,6 +108,6 @@ p.emailVerifyFooterBlockHead {
     font-family:var(--font-family-roboto-slab)
 }
 ::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
 }
 </style>

@@ -122,7 +122,7 @@ export default {
     border: none;
 }
 ::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
 }
 .allFromsTable thead {
     position: sticky;
