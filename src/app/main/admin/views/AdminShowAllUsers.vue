@@ -5,8 +5,11 @@
     <dashboard-slot>
       <admin-search title="Manage Users" />
       <div class="allFromsTable">
-        <!-- <testing-table :tables="tableData" :tablesHead="tableHead"/> -->
-        <admin-table :tables="tableData" :tablesHead="tableHead"/>
+         <select name="testingSelect" id="testingSelect" v-model="currentEntries" @change="pageEntries">
+      <option  v-for="se in showEntries" :key="se" :value="se">{{se}}</option>
+    </select>
+        <testing-table :tables="tableData" :tablesHead="tableHead" />
+        <!-- <admin-table :tables="tableData" :tablesHead="tableHead"/> -->
         <!-- <table id="example" class="display" style="width:100%">
             <thead>
             <tr>
@@ -59,73 +62,79 @@ import DashboardSlot from "../../../slots/DashboardSlot.vue";
 import HeaderSlot from "../../../slots/HeaderSlot.vue";
 import AdminSearch from "../components/adminSearch.vue";
 import adminSideNav from "../components/adminSideNav.vue";
-// import TestingTable from '../components/TestingTable.vue';
-import AdminTable from '../components/AdminTable.vue';
+import TestingTable from '../components/TestingTable.vue';
+// import AdminTable from '../components/AdminTable.vue';
+import 'alga-css/dist/alga.min.css'
+// import {$array} from 'alga-js'
 export default {
   components: {
     DashboardSlot,
     HeaderSlot,
     adminSideNav,
     AdminSearch,
-    // TestingTable,
-    AdminTable,
+    TestingTable,
+    // AdminTable,
   },
   data() {
     return {
       countOfPage: 7,
       currPage: 1,
+      showEntries:[5,10,15,20,30],
+      currentEntries:10,
+      filteredEntries:[],
+       
       tableData: [
         {
-          Firstname: "Registraion",
+          Firstname: "Registraion1",
           lastname: "Bernard@gmail.com",
           email: "publish",
           mobile: 1234546789,
           usertype: "Controller",
         },
         {
-          Firstname: "Registraion",
+          Firstname: "Registraion2",
           lastname: "Bernard@gmail.com",
           email: "publish",
           mobile: 1234546789,
           usertype: "Controller",
         },
         {
-          Firstname: "Registraion",
+          Firstname: "Registraion3",
           lastname: "Bernard@gmail.com",
           email: "publish",
           mobile: 1234546789,
           usertype: "Controller",
         },
         {
-          Firstname: "Registraion",
+          Firstname: "Registraion4",
           lastname: "Bernard@gmail.com",
           email: "publish",
           mobile: 1234546789,
           usertype: "Controller",
         },
         {
-          Firstname: "Registraion",
+          Firstname: "Registraion5",
           lastname: "Bernard@gmail.com",
           email: "publish",
           mobile: 1234546789,
           usertype: "Controller",
         },
         {
-          Firstname: "Registraion",
+          Firstname: "Registraion6",
           lastname: "Bernard@gmail.com",
           email: "publish",
           mobile: 1234546789,
           usertype: "Controller",
         },
         {
-          Firstname: "Registraion",
+          Firstname: "Registraion7",
           lastname: "Bernard@gmail.com",
           email: "publish",
           mobile: 1234546789,
           usertype: "Controller",
         },
         {
-          Firstname: "Registraion",
+          Firstname: "Registraion8",
           lastname: "Bernard@gmail.com",
           email: "publish",
           mobile: 1234546789,
@@ -143,6 +152,9 @@ export default {
       return Math.ceil(this.tableData.length / this.countOfPage);
     },
   },
+  created() {
+    
+  },
   methods: {
     setPage(idx) {
       if (idx <= 0 || idx > this.totalPage) {
@@ -153,6 +165,15 @@ export default {
     selectData(event) {
       this.countOfPage = event.target.value;
     },
+   mounted() {
+     console.log(this.tableData);
+     console.log(this.currentEntries);
+   },
+      // pageEntries(){
+      //   this.filteredEntries=$array.paginate(this.currentEntries)(1, this.tableData)
+      //   console.log(this.tableData);
+      //   console.log(this.currentEntries);
+      // } 
   },
 };
 </script>

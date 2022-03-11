@@ -42,12 +42,13 @@ export default {
         }, 
       },
       data: {
-        labels: ["Jan", "Feb", "Mar", "Apr","May","june"],
+        labels: ["Jan", "Feb", "Mar", "Apr","May","june","july","aug","sep","nov","dec"],
         datasets: [
           {
             label: "Form Submitted",
             backgroundColor:"#192a6b",
             data: [120, 100, 80, 60, 40, 20, 0],
+            
           },
         //   {
         //     label: "My Second Dataset",

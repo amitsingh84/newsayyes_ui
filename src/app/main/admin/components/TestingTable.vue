@@ -1,186 +1,180 @@
 <template>
-  <div class="adminTable">
-    <table id="example" class="display" style="width: 100%">
-      <thead>
-        <tr>
-          <th><input type="checkbox" name="check" id="checkAll" /></th>
-          <th v-for="(tabhead, i) in tablesHead" :key="i">{{ tabhead }}</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          v-for="(data, index) in tables.slice(
-            pageStart,
-            pageStart + countOfPage
-          )"
-          :key="index"
-        >
-          <td><input type="checkbox" name="checkData" id="allDataCheck" /></td>
-          <td v-for="(t, i) in Object.values(data)" :key="i">{{ t }}</td>
+    <div class="adminTable">
+        <table id="example" class="display" style="width:100%">
+            <thead>
+            <tr >
+                <th><input type="checkbox" name="check" id="checkAll"></th>
+                <th v-for="(tabhead,i) in tablesHead" :key="i">{{tabhead}}</th>
+                <th>Action</th>
+            </tr>
+          </thead>
+           <tbody>
+              <tr v-for="(data,index) in tables.slice(pageStart, pageStart + countOfPage)" :key="index">
 
-          <td>
-            <a href="#"
-              ><img src="../../../../assets/imgs/admin/pencil.png" alt="" /></a
-            ><a href="#"
-              ><img src="../../../../assets/imgs/admin/pencil.png" alt=""
-            /></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="selectAndPagination">
-      <div class="form-group">
-        <select
-          class="form-control"
-          id="exampleFormControlSelect1"
-          @change="selectData"
-        >
-          <option value="7">7</option>
-          <option value="10">10</option>
-          <option value="700">All</option>
-        </select>
-      </div>
-
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end">
-          <li
-            class="page-item"
-            v-bind:class="{ disabled: currPage === 1 }"
-            @click.prevent="setPage(currPage - 1)"
-          >
-            <a class="page-link" href="">Prev</a>
-          </li>
-          <li
-            class="page-item"
-            v-for="(n, index) in totalPage"
-            :key="index"
-            v-bind:class="{ active: currPage === n }"
-            @click.prevent="setPage(n)"
-          >
-            <a class="page-link" href="">{{ n }}</a>
-          </li>
-          <li
-            class="page-item"
-            v-bind:class="{ disabled: currPage === totalPage }"
-            @click.prevent="setPage(currPage + 1)"
-          >
-            <a class="page-link" href="">Next</a>
-          </li>
-        </ul>
-      </nav>
+                  <td><input type="checkbox" name="checkData" id="allDataCheck">{{countOfPage}}</td>
+                  <td v-for="(t,i) in Object.values(data)" :key="i">{{t}}</td>
+                 
+                  <td><a href="#"><img src="../../../../assets/imgs/admin/pencil.png" alt=""></a><a href="#"><img src="../../../../assets/imgs/admin/pencil.png" alt=""></a></td>
+                  
+              </tr>
+          </tbody>
+        </table>
+         <div class="selectAndPagination">
+             <div class="form-group">
+      <select id="exampleFormControlSelect1" @change="selectData">
+      <option value=2>2</option>
+      <option value=3>10 </option> 
+       <option value=8>All</option>
+    </select>
     </div>
-  </div>
+
+        <nav aria-label="Page navigation example">
+    <!-- <ul class="pagination justify-content-end">
+      <li class="page-item" v-bind:class="{'disabled': (currPage === 1)}" @click.prevent="setPage(currPage-1)"><a class="page-link" href="">Prev</a></li>
+      <li class="page-item" v-for="(n,index) in totalPage" :key="index" v-bind:class="{'active': (currPage === (n))}" @click.prevent="setPage(n)"><a class="page-link" href="">{{n}}</a></li>
+      <li class="page-item" v-bind:class="{'disabled': (currPage === totalPage)}" @click.prevent="setPage(currPage+1)"><a class="page-link" href="">Next</a></li>
+    </ul> -->
+    <!-- <pagination-number/> -->
+     <b-pagination
+          v-model="currPage"
+          :total-rows="totalPage"
+          :per-page="ex1PerPage"
+          first-number
+        ></b-pagination>
+
+  </nav>
+        </div>
+    </div>
 </template>
 
 <script>
-import $ from 'jquery';
-export default {
-  data() {
-    return {
-      countOfPage: 7,
-      currPage: 1,
-    //   entries:[],
+// import PaginationNumber from '../components/PaginationNumber.vue'
 
-products:[]
+
+   
+// import $ from 'jquery';
+ import {ref} from 'vue'
+export default {
+  // components:{PaginationNumber},
+    data() {
+    return {
+      countOfPage: 3,
+      currPage: 1,
+     ex1CurrentPage: 1,
+   ex1PerPage: ref(1),
+  //  ex1Rows: 1
+      
+      
     };
   },
-  props: ["tables", "tablesHead"],
+   props:['tables','tablesHead'],
+  
+  mounted() {
+      
+      console.log(this.ex1PerPage);
+      console.log(this.ex1Rows);
+      // this.ex1CurrentPage=this.currPage;
+      // this.ex1Rows=this.totalPage
+      
 
-  created() {
-    console.log($('#example'));
-    //  this.products = response.data;
-      $('#example').DataTable(); 
+    //   $('#example').DataTable({
+    //             responsive: true,
+                
+    //         });
   },
-  computed: { 
+  computed: {
     pageStart() {
+      console.log('count', this.countOfPage);
+      console.log('page start',(this.currPage - 1) * this.countOfPage);
       return (this.currPage - 1) * this.countOfPage;
     },
     totalPage() {
+      console.log('total',Math.ceil(this.tables.length / this.countOfPage));
       return Math.ceil(this.tables.length / this.countOfPage);
+
     },
   },
   methods: {
-    setPage(idx) {
-      if (idx <= 0 || idx > this.totalPage) {
-        return;
-      }
-      this.currPage = idx;
-    },
+    // setPage(idx) {
+    //   if (idx <= 0 || idx > this.totalPage) {
+    //     return;
+    //   }
+    //   this.currPage = idx;
+    // },
     selectData(event) {
       this.countOfPage = event.target.value;
     },
   },
-   
-};
+}
 </script>
 
 <style scoped>
 .allFromsTable {
-  width: 84%;
-  margin: auto;
+    width: 84%;
+    margin: auto;
 }
-.allFromsTable table {
-  width: 100%;
+.allFromsTable table{
+    width: 100%;
 }
 
 .allFromsTable thead th {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 .allFromsTable thead th {
-  font-size: 1.6rem;
-  background: #192a6b;
-  color: #fff;
-  padding: 10px;
-  border: 1px solid var(--tertiary-color);
+    font-size: 1.6rem;
+    background: #192a6b;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid var(--tertiary-color);
+
 }
 .allFromsTable tbody td {
-  padding: 10px;
-  font-size: 1.5rem;
-  color: #192a6b;
-  font-weight: 500;
-  border: 1px solid var(--tertiary-color);
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #192a6b;
+    font-weight: 500;
+    border: 1px solid var(--tertiary-color);
 }
 .allFromsTable {
-  margin-top: 30px;
-  max-height: calc(100vh - 186px);
-  overflow-y: scroll;
+    margin-top: 30px;
+    max-height: calc(100vh - 186px);
+    overflow-y: scroll;
 }
 .allFromsTable .pagination li a {
-  color: var(--primary-color);
-  border: none;
+    color: var(--primary-color);
+    border: none;
 }
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 .allFromsTable thead {
-  position: sticky;
-  top: 0;
+    position: sticky;
+    top: 0;
 }
 .page-item.active .page-link {
-  z-index: 3;
-  color: #fff;
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+    z-index: 3;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 .allFromsTable .pagination {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 .allFromsTable .pagination li {
-  border: 1px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 .selectAndPagination > div {
-  flex: 0.4;
+    flex: .4;
 }
-.selectAndPagination > nav {
-  flex: 1;
+.selectAndPagination > nav{
+flex: 1;
 }
 .selectAndPagination {
-  display: flex;
-  margin-top: 12px;
+    display: flex;
+    margin-top: 12px;
 }
 .allFromsTable td img {
-  width: 12px;
-  margin-right: 15px;
+    width: 12px;
+    margin-right: 15px;
 }
 </style>
