@@ -4,7 +4,7 @@
     <admin-side-nav />
     <dashboard-slot>
       <admin-search title="Manage Users" />
-      <div class="allFromsTable">
+      <div class="allFromsTable tableColor">
         <show-data-table :tableData="tableData" :tableHead="tableHead"/>
          <!-- <select name="testingSelect" id="testingSelect" v-model="currentEntries" @change="pageEntries">
       <option  v-for="se in showEntries" :key="se" :value="se">{{se}}</option>

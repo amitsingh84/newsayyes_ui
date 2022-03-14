@@ -1,7 +1,7 @@
 import PasswordProtectedPage from "../data-subject/views/PasswordProtectedPage";
-import DataSubjectVerify from "../data-subject/views/DataSubjectVerify";
+import EmailVerifyPage from "../data-subject/views/EmailVerifyPage.vue";
 import DataSubjectController from "../data-subject/DataSubjectController";
-import DataSubjectEmailVerify from "../data-subject/views/DataSubjectEmailVerify";
+import CreatePssword from "../data-subject/views/CreatePssword";
 import DataSubjectMobileVerify from "../data-subject/views/DataSubjectMobileVerify";
 import DataSubjectAddressVerify from "../data-subject/views/DataSubjectAddressVerify";
 import AddressVerifyCode from "../data-subject/views/AddressVerifyCode";
@@ -13,10 +13,10 @@ const dataSubjectRoutes=[{
             path:'',component:PasswordProtectedPage
         },
         {
-            path:'verify',component:DataSubjectVerify
+            path:'verify',component:EmailVerifyPage
         },
         {
-            path:'email-verify',component:DataSubjectEmailVerify
+            path:'email-verify',component:CreatePssword
         },
         {
             path:'email-mobile',component:DataSubjectMobileVerify

@@ -24,6 +24,47 @@ a,button,thead th{font-family: var(--font-family-roboto-slab) !important; }
 a{color: var(--tertiary-color);}
 p,label,input,a{color: var(--tertiary-color);}
 
+/*----------button---------*/
+.solidBtn{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 7px;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    display: block;
+    border:2px solid var(--primary-color);
+      
+}
+.solidBtn:hover,.solidBackBtn:hover{
+    color: var(--primary-color);
+    background-color: transparent;
+}
+.lineBtn{
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 10px 40px;
+    border-radius: 7px;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    display: block;
+    border:2px solid var(--primary-color);
+      
+}
+.lineBtn:hover{
+    color: #fff;
+    background-color: var(--primary-color)
+}
+.backBtn{
+    background-color: var(--primary-color);
+    color: #fff !important;
+    padding: 8px 24px;
+    border-radius: 7px;
+    font-size: 1.4rem;
+    margin-top: 0; 
+    border: 2px solid var(--primary-color);
+}
+/*---------button-*/
 .imageAvatar img {
     width: 40px;
     border-radius: 50%;
@@ -64,18 +105,7 @@ p,label,input,a{color: var(--tertiary-color);}
     margin-top: 10px;
 }
 
-  .solidBtn{
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 10px 40px;
-      border-radius: 7px;
-      font-size: 1.4rem;
-      margin-top: 10px;
-      display: block;
-  }
-  .solidBtn:hover,.solidBackBtn:hover{
-      color: #fff;
-  }
+  
 
   /* table style */
   div#alldata_length label{
@@ -123,11 +153,14 @@ div#alldata_paginate a {
     }
    
     .dataTables_scroll {
-        /* overflow-x: scroll; */
+        overflow-x: scroll;
         -webkit-overflow-scrolling: touch
     }
+   
+
+  
     .dataTables_scrollHead,.dataTables_scrollBody{
-        overflow: visible !important;
+        /* overflow: visible !important; */
       }
       .dataTables_scroll{
        /* overflow-y: clip;  */
@@ -136,3 +169,16 @@ div#alldata_paginate a {
         background-color: #192a6b;
         color: #fff !important;
     }
+    div#alldata_filter input:after {
+    }
+    div#alldata_filter input {
+        width: 183px;
+        height: 32px;
+        border-radius: 7px;
+        position: relative;
+    }
+    .tableColor tr.even td {
+        background: #d4d4e7 !important;
+        border: none;
+    }
+    .tableColor tr.odd td{border: none;}

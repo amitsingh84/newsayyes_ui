@@ -1,6 +1,6 @@
 <template>
   <div class="passwordProtectedPage">
-    <header-nav />
+    <header-nav controllerName="Controller Name" />
     <div class="passwordProtectBlock">
       <div class="passwordProtectBlockRow">
         <h4>Contact Form</h4>
@@ -29,7 +29,7 @@
               >
             </div>
           </div>
-          <a href="#" class="solidBtn">Login</a>
+          <router-link to="/data-subject/verify" href="#" class="backBtn">Fill Form</router-link>
         </div>
 <div class="passwordProtectFooter">
        <data-subject-footer/>
@@ -40,10 +40,10 @@
 </template>
 
 <script>
-import HeaderNav from "../../../shared/components/HeaderNav.vue";
+import HeaderNav from '../../../shared/components/HeaderNav.vue';
 import DataSubjectFooter from '../components/DataSubjectFooter.vue';
 export default {
-  components: { HeaderNav,DataSubjectFooter }
+  components: { DataSubjectFooter,  HeaderNav }
 };
 </script>
 <style scoped>
@@ -117,5 +117,12 @@ p.formDesc {
 .passwordProtectInput {
   margin-bottom: 40px;
 }
-
+.centeText {
+    font-size: 1.9rem;
+    text-align: center;
+}
+.userProfile {
+    font-size: 1.9rem;
+    text-align: right;
+}
 </style>

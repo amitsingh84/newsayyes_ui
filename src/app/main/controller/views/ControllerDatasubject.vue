@@ -1,8 +1,8 @@
 <template>
   <div class="controllerDashboard">
-    <header-nav />
+    <header-nav userid="1"/>
     <div class="controllerDashboardBody">
-      <controller-side-nave></controller-side-nave>
+      <controller-side-nav></controller-side-nav>
 
       <dashboard-slot>
         <div class="allDataSubject">
@@ -55,7 +55,7 @@
 <script>
 // import LeftSide from "../../../slots/LeftSide.vue";
 // import HeaderSlot from "../../../slots/HeaderSlot.vue";
-import ControllerSideNave from "../../../shared/components/ControllerSideNave.vue";
+import ControllerSideNav from "../../../shared/components/ControllerSideNav.vue";
 import DashboardSlot from "../../../slots/DashboardSlot.vue";
 import HeaderNav from "../../../shared/components/HeaderNav.vue";
 import SearchForm from "../components/SearchForm.vue";
@@ -63,7 +63,7 @@ export default {
   components: {
     // HeaderSlot,
     // LeftSide,
-    ControllerSideNave,
+    ControllerSideNav,
     DashboardSlot,
     HeaderNav,
     SearchForm,

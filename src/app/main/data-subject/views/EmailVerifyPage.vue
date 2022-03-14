@@ -1,12 +1,13 @@
 <template>
   <div class="dataSubjectVerifyBlock">
-    <header-slot />
+    <header-nav controllerName="Controller Name"/>
     <div class="verifyContent">
       <div class="row">
         <div class="col-4"></div>
         <div class="col-8">
           <h3>Contact Form</h3>
           <div class="right_block">
+            <router-link to="/data-subject/email-verify">
             <h4>Please verify your email address</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -14,6 +15,7 @@
               necessitatibus magni porro saepe laboriosam sequi repellat
               corporis id laborum expedita harum modi unde.
             </p>
+            </router-link>
           </div>
           <div class="right_block">
             <h4>Please verify your email address</h4>
@@ -34,10 +36,10 @@
   </div>
 </template>
 <script>
-import HeaderSlot from "../../../slots/HeaderSlot.vue";
+import HeaderNav from '../../../shared/components/HeaderNav.vue';
 import DataSubjectFooter from "../components/DataSubjectFooter.vue";
 export default {
-  components: { HeaderSlot, DataSubjectFooter },
+  components: {  DataSubjectFooter, HeaderNav },
 };
 </script>
 

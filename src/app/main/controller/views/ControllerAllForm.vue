@@ -1,15 +1,15 @@
 <template>
   <div class="controllerAllFrom">
-    <header-nav />
-    <controller-side-nave />
+    <header-nav userid="1"/>
+    <controller-side-nav />
     <dashboard-slot>
-      <search-form :id="0"/>
+      <search-form id="0"/>
       <div class="controllerFormsblock">
         <div class="controllerForm">
           <div class="controllerFormImg"><img src="../../../../assets/imgs/google-forms.png" alt=""></div>
           <div class="controllerFormTitle"><h4> Personal Form</h4></div>
           <div class="controllerFormsubandtime"><p class="totalFormSub">2 From Submission</p><p class="formDateCreate">Create on: Feb 4,2022 4:55am</p></div>
-          <div class="controllerFormAction"><img src="../../../../assets/imgs/editdata.png" alt="edit"> <img src="../../../../assets/imgs/eye.png" alt="eye"><img src="../../../../assets/imgs/history.png" alt="history"><img src="../../../../assets/imgs/delete.png" alt="delete"></div>
+          <div class="controllerFormAction"><img src="../../../../assets/imgs/editdata.png" alt="edit"> <img src="../../../../assets/imgs/eye.png" alt="eye"> <router-link to="/controller/form-detail"><img src="../../../../assets/imgs/history.png" alt="history"></router-link><img src="../../../../assets/imgs/delete.png" alt="delete"></div>
         </div>
       </div>
     </dashboard-slot>
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import ControllerSideNave from "../../../shared/components/ControllerSideNave.vue";
+import ControllerSideNav from "../../../shared/components/ControllerSideNav.vue";
 import HeaderNav from "../../../shared/components/HeaderNav.vue";
 import DashboardSlot from "../../../slots/DashboardSlot.vue";
 import SearchForm from '../components/SearchForm.vue';
 export default {
-  components: { HeaderNav, ControllerSideNave, DashboardSlot, SearchForm },
+  components: { HeaderNav, ControllerSideNav, DashboardSlot, SearchForm },
 };
 </script>
 <style scoped>

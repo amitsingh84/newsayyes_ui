@@ -2,9 +2,9 @@
   <div class="controllerDashSearch">
     <div class="controllerSearchRow">
       <div v-if="id != 0">
-        <a href="#" class="solidBtn">Back</a>
+        <a href="#" @click="$router.go(-1)" class="backBtn">Back</a>
       </div>
-      <div v-if="id != 0" class="userDetails"><p>User Details</p></div>
+      <div v-if="id != 0" class="userDetails"><p>{{title}}</p></div>
       <div class="searchOptions">
         <span
           ><img src="../../../../assets/imgs/search.png" alt="search" />
@@ -26,7 +26,7 @@ export default {
       data: "",
     };
   },
-  props: ["id"],
+  props: ["id","title"],
 };
 </script>
 <style scoped>
@@ -38,6 +38,7 @@ export default {
 .controllerSearchRow > div {
   flex: 1;
 }
+ 
 
 .controllerSearchRow input {
   height: 33px;

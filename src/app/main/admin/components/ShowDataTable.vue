@@ -1,7 +1,7 @@
 <template>
   <div class="showAllDataTable">
-     <div class="table-responsive">
-    <table id="alldata" class="display" >
+     <!-- <div class="table-responsive"> -->
+    <table id="alldata" class="display " >
       <thead>
         <tr>
           <th><input type="checkbox" name="check" id="checkAll" /></th>
@@ -23,7 +23,7 @@
         </tr>
       </tbody>
     </table>
-     </div>
+     <!-- </div> -->
   </div>
 </template>
 <script>
@@ -92,9 +92,9 @@ export default {
   props: ["tableData", "tableHead"],
   mounted() {
     $("#alldata").DataTable({
-        "scrollY":"50vh",
-        "scrollX": true,
-        scrollCollapse: true,
+        "scrollY":"45vh",
+        // "scrollX": true,
+        // scrollCollapse: true,
         lengthMenu: [[6, 20, 30, -1], [6, 20, 30, "All"]],
         // responsive: true
          
@@ -115,8 +115,8 @@ td.tableAction img {
     margin-right: 12px;
 }
 table.dataTable thead th {
-   font-size: 1.6rem;
-    font-weight: 500;
+   font-size: 1.5rem;
+    font-weight: 400;
 }
 table#alldata td {
     font-size: 1.5rem;
@@ -148,7 +148,7 @@ table{
    
 }
 tbody td {
-        padding: 13px 10px;
+        padding: 10px 10px;
         border-bottom: 1px solid gray;
         /* min-width: 140px !important; */
         height: 18px;
@@ -170,5 +170,19 @@ tbody td {
       min-width: 10px !important;
        
     }
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
   
+  /* Track */
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+ ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
 </style>

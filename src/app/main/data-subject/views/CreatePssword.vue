@@ -1,12 +1,13 @@
 <template>
   <div class="dataSubjectVerifyBlock">
-    <header-slot />
+    <header-nav  controllerName="Controller Name"/>
     <div class="verifyEmail">
       <div class="row">
         <div class="col-4"></div>
         <div class="col-8">
           <h3>Contact Form</h3>
           <div class="right_side_block">
+           
             <p>
               <b
                 >Thank you!</b> Please choose a password to bwe able to change or
@@ -14,23 +15,35 @@
             </p>
             <div class="right_side_box">
               <div class="right_side_box_row">
+                 <form >
                 <p>
                   <input
                     type="text"
                     name="EmailVerifyText"
-                    id="EmailVerifyText"
+                    id="EmailVerifyText" 
+                    class="formControl"
+                    placeholder="Password"
+                    required
                   />
+                  <span class="enterPassword">Password</span>
+
                 </p>
                 <p class="mt-4">
                   <input
                     type="text"
                     name="REmailVerifyText"
-                    id="REmailVerifyText"
+                    id="REmailVerifyText" 
+                    class="formControl"
+                    placeholder="Retype Password"
+                    required
                   />
+                 <span class="enterPassword">Retype Password</span>
+                 <span class="errormsg valid-tooltip" disabled>Passoword Not Match</span>
                 </p>
+                </form>
               </div>
               <div class="login_btn">
-                <a href="#" class="solidBtn">ok</a>
+                <button type="submit" class="solidBtn" style="padding: 7px 40px;">OK</button>
               </div>
             </div>
             <div class="emailVerifyFooterBlock">
@@ -47,10 +60,11 @@
   </div>
 </template>
 <script>
-import HeaderSlot from "../../../slots/HeaderSlot.vue";
+import HeaderNav from '../../../shared/components/HeaderNav.vue';
+  'use strict'
 import DataSubjectFooter from "../components/DataSubjectFooter.vue";
 export default {
-  components: { HeaderSlot, DataSubjectFooter },
+  components: {  DataSubjectFooter, HeaderNav },
 };
 </script>
 
@@ -81,7 +95,7 @@ export default {
     align-items: end;
     width: 400px;
     padding: 48px 30px;
-    border: 1px solid;
+    border: 1px solid var(--primary-color);
     border-radius: 7px;
     gap: 19px;
     margin: 48px 0;
@@ -90,6 +104,10 @@ export default {
 .right_side_box input {
     height: 38px;
     width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    background: transparent;
+    padding-left: 17px;
 } 
 .right_side_box .right_side_box_row {
     flex: 1;
@@ -101,6 +119,18 @@ export default {
     margin-bottom: 0;
     
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: transparent;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: transparent;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: transparent;
+}
 .emailVerifyFooterBlock {
     margin-bottom: 48px;
 }
@@ -110,6 +140,26 @@ p.emailVerifyFooterBlockHead {
     font-family:var(--font-family-roboto-slab)
 }
 ::-webkit-scrollbar {
-    /* display: none; */
+    display: none;
 }
+.right_side_box_row p {
+    position: relative;
+}
+
+.right_side_box_row .enterPassword {
+   position: absolute;
+    left: 12px;
+    top: 10px;
+    font-size: 1.4rem;
+    color: gray;
+    z-index: -1;
+}
+
+.right_side_box_row input:focus~.enterPassword,.right_side_box_row input:target~.enterPassword,.right_side_box_row .formControl:not(:placeholder-shown)~.enterPassword { 
+    top: -12px;
+    background: #fff;
+    color: var(--primary-color);
+    z-index: 1;
+} 
+span.enterPassword {transition: .7s;}
 </style>

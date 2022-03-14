@@ -1,10 +1,18 @@
 <template>
   <div class="adminAllPlansBlock">
-    <header-slot :bgColor="'#b3b9ce'"> </header-slot>
+     <admin-header-nav bgColor="#b3b9ce"/>
     <admin-side-nav />
     <dashboard-slot>
-      <admin-search title="Subscriptions Plans" />
-      <div class="allFromsTable">
+      <admin-search title="Subscriptions Plans" button="button"/>
+      <div class="allFromsTable tableColor">
+        <!-- <div class="select_table">
+          <select name="select" id="sele">
+            <option value="controller">controller</option>
+            <option value="admin">admin</option>
+            <option value="data">data</option>
+            <option value="auther">auther</option>
+          </select>
+        </div> -->
         <show-data-table :tableData="tableData" :tableHead="tableHead" />
       </div>
     </dashboard-slot>
@@ -13,7 +21,7 @@
 
 <script>
 import DashboardSlot from "../../../slots/DashboardSlot.vue";
-import HeaderSlot from "../../../slots/HeaderSlot.vue";
+import AdminHeaderNav from '../components/AdminHeaderNav.vue';
 import AdminSearch from "../components/adminSearch.vue";
 import adminSideNav from "../components/adminSideNav.vue";
 import ShowDataTable from "../components/ShowDataTable.vue";
@@ -21,16 +29,76 @@ import ShowDataTable from "../components/ShowDataTable.vue";
 export default {
   components: {
     DashboardSlot,
-    HeaderSlot,
     adminSideNav,
     AdminSearch,
     ShowDataTable,
+    AdminHeaderNav,
   },
   data() {
     return {
       countOfPage: 7,
       currPage: 1,
       tableData: [
+        {
+          planName: "Registraion",
+          plnaDuration: "Bernard@gmail.com",
+          planPrice: "publish",
+          planLimit: 1234546789,
+          monthlySubmission: "Auther",
+          availableSpace: "Controller",
+          monthlyformview: "Controller",
+          status: "Controller",
+        },
+        {
+          planName: "Registraion",
+          plnaDuration: "Bernard@gmail.com",
+          planPrice: "publish",
+          planLimit: 1234546789,
+          monthlySubmission: "data subject",
+          availableSpace: "Controller",
+          monthlyformview: "Controller",
+          status: "Controller",
+        },
+        {
+          planName: "Registraion",
+          plnaDuration: "Bernard@gmail.com",
+          planPrice: "publish",
+          planLimit: 1234546789,
+          monthlySubmission: "Controller",
+          availableSpace: "Controller",
+          monthlyformview: "Controller",
+          status: "Controller",
+        },
+        {
+          planName: "Registraion",
+          plnaDuration: "Bernard@gmail.com",
+          planPrice: "publish",
+          planLimit: 1234546789,
+          monthlySubmission: "Controller",
+          availableSpace: "Controller",
+          monthlyformview: "Controller",
+          status: "Controller",
+        },
+        {
+          planName: "Registraion",
+          plnaDuration: "Bernard@gmail.com",
+          planPrice: "publish",
+          planLimit: 1234546789,
+          monthlySubmission: "Controller",
+          availableSpace: "Controller",
+          monthlyformview: "Controller",
+          status: "Controller",
+        },
+        {
+          planName: "Registraion",
+          plnaDuration: "Bernard@gmail.com",
+          planPrice: "publish",
+          planLimit: 1234546789,
+          monthlySubmission: "Controller",
+          availableSpace: "Controller",
+          monthlyformview: "Controller",
+          status: "Controller",
+        },
         {
           planName: "Registraion",
           plnaDuration: "Bernard@gmail.com",

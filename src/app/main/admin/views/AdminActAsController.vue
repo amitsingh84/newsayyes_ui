@@ -1,6 +1,6 @@
 <template>
     <div class="adminActAsController">
-        <header-slot :bgColor="'#b3b9ce'"/>
+        <admin-header-nav bgColor="#b3b9ce"/>
         <admin-side-nav/>
         <dashboard-slot>
             <div class="adminActAsSearch">
@@ -20,12 +20,12 @@
 </template>
 
 <script>
+import AdminHeaderNav from '../components/AdminHeaderNav.vue'
 import DashboardSlot from '../../../slots/DashboardSlot.vue'
-import HeaderSlot from '../../../slots/HeaderSlot.vue'
 import adminSideNav from '../components/adminSideNav.vue'
 export default 
 {
-  components: { adminSideNav,HeaderSlot, DashboardSlot } 
+  components: { adminSideNav, DashboardSlot, AdminHeaderNav } 
      
 }
 </script>

@@ -1,9 +1,9 @@
 <template>
   <div class="viewDataSubDetail">
     <header-nav />
-    <controller-side-nave />
+    <controller-side-nav />
     <dashboard-slot>
-      <search-form />
+      <search-form title="User Details" />
       <div class="viewDataSubBlock">
         <div class="downandPrintBtn">
           <a href="#">Download</a><a href="#">Print</a>
@@ -37,67 +37,76 @@
             <tr>
               <th>Verification Level</th>
               <td>
-                  <p>
-
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="phoneNumber"
-                />
-                <label class="form-check-label" for="phoneNumber">
-                  Phone Number
-                </label>
-                  </p>
-                  <p>
-                      <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="email"
-                />
-                <label class="form-check-label" for="email">
-                 Email
-                </label>
-                  </p>
-                  <p>
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="address"
-                />
-                <label class="form-check-label" for="address">
-                  Address
-                </label></p>
+                <p>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="phoneNumber"
+                  />
+                  <label class="form-check-label" for="phoneNumber">
+                    Phone Number
+                  </label>
+                </p>
+                <p>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="email"
+                  />
+                  <label class="form-check-label" for="email"> Email </label>
+                </p>
+                <p>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="address"
+                  />
+                  <label class="form-check-label" for="address">
+                    Address
+                  </label>
+                </p>
               </td>
             </tr>
           </table>
         </div>
         <div class="varificationStatus">
-            <table>
-                <tr>
-                    <th>Varification Status</th>
-                    <td><img src="../../../../assets/imgs/star.png" alt="star"><img src="../../../../assets/imgs/star.png" alt="star"><img src="../../../../assets/imgs/star.png" alt="star"></td>
-                </tr>
-            </table>
+          <table>
+            <tr>
+              <th>Varification Status</th>
+              <td>
+                <img src="../../../../assets/imgs/star.png" alt="star" /><img
+                  src="../../../../assets/imgs/star.png"
+                  alt="star"
+                /><img src="../../../../assets/imgs/star.png" alt="star" />
+              </td>
+            </tr>
+          </table>
         </div>
         <div class="consentDetails">
-            <h4>Consent Details</h4>
-            <p><span>Consents 1-</span> I accepted photo of mine way be shared on social media</p>
-            <p><span>Consents 1-</span> I accepted photo of mine way be shared on social media</p>
+          <h4>Consent Details</h4>
+          <p>
+            <span>Consents 1-</span> I accepted photo of mine way be shared on
+            social media
+          </p>
+          <p>
+            <span>Consents 1-</span> I accepted photo of mine way be shared on
+            social media
+          </p>
         </div>
       </div>
     </dashboard-slot>
   </div>
 </template>
 <script>
-import ControllerSideNave from "../../../shared/components/ControllerSideNave.vue";
+import ControllerSideNav from "../../../shared/components/ControllerSideNav.vue";
 import HeaderNav from "../../../shared/components/HeaderNav.vue";
 import DashboardSlot from "../../../slots/DashboardSlot.vue";
 import SearchForm from "../components/SearchForm.vue";
 export default {
-  components: { HeaderNav, ControllerSideNave, DashboardSlot, SearchForm },
+  components: { HeaderNav, ControllerSideNav, DashboardSlot, SearchForm },
 };
 </script>
 <style scoped>
@@ -131,54 +140,57 @@ table th {
 table tr {
   border-bottom: 8px solid #fff;
 }
-.viewUserDetails,.varificationStatus {
+.viewUserDetails,
+.varificationStatus {
   border-bottom: 1px solid var(--tertiary-color);
   padding-bottom: 24px;
 }
-.verificationLevel table th,.verificationLevel table td{
-    vertical-align: top;
+.verificationLevel table th,
+.verificationLevel table td {
+  vertical-align: top;
 }
-.verificationLevel input{
-    width: 15px;
-    height: 15px;
-   
-    font-weight: 400;
-    margin-right: 10px;
-    margin-top: 0;
-    box-shadow: none;
+.verificationLevel input {
+  width: 15px;
+  height: 15px;
+
+  font-weight: 400;
+  margin-right: 10px;
+  margin-top: 0;
+  box-shadow: none;
 }
-.verificationLevel input:checked{
- background-color: var(--tertiary-color);
-    border: var(--tertiary-color);
+.verificationLevel input:checked {
+  background-color: var(--tertiary-color);
+  border: var(--tertiary-color);
 }
-.verificationLevel,.consentDetails {
-    margin-top: 24px;
+.verificationLevel,
+.consentDetails {
+  margin-top: 24px;
 }
 .verificationLevel label {
-    color: #192a6b;
-    font-size: 1.4rem;
+  color: #192a6b;
+  font-size: 1.4rem;
 }
-.verificationLevel p{
-    display: flex;
-    align-items: center;
+.verificationLevel p {
+  display: flex;
+  align-items: center;
 }
 .varificationStatus td img {
-    width: 14px;
-    margin-right: 14px;
+  width: 14px;
+  margin-right: 14px;
 }
 .consentDetails p {
-    margin-bottom: 0;
-    font-size: 1.4rem;
-    color: var(--primary-color);
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: var(--primary-color);
 }
 
 .consentDetails span {
-    font-size: 1.4rem;
-    font-family: var(--font-family-roboto-slab);
-    font-weight: 600;
-    margin-right: 10px;
+  font-size: 1.4rem;
+  font-family: var(--font-family-roboto-slab);
+  font-weight: 600;
+  margin-right: 10px;
 }
 .consentDetails h4 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 </style>

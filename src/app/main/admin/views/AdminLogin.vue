@@ -1,10 +1,6 @@
 <template>
     <div class="adminLogin">
-        <header-slot>
-            <div class="container-fluid">
-                <h1 style="color:#fff">SayYesNo</h1>
-            </div>
-        </header-slot>
+         <header-nav />
         <div class="adminLoginBlock">
             
                 <div
@@ -51,10 +47,10 @@
     </div>
 </template>
 
-<script>
-import HeaderSlot from '../../../slots/HeaderSlot.vue'
+<script> 
+import HeaderNav from '../../../shared/components/HeaderNav.vue'
 export default {
-  components: { HeaderSlot },
+  components: { HeaderNav },
     
 }
 </script>
@@ -62,7 +58,7 @@ export default {
 <style scoped>
 .adminLoginForm{
    height: calc(100vh - 80px);
-    background: url(/img/loginFormbg.bd7b6105.png) center center;
+    background: url(/imgs/loginFormbg.png) center center;
     background-size: cover;
 }
 .adminLoginForm > div {
@@ -80,5 +76,6 @@ export default {
     height: 100%;
     background: var(--primary-color); 
     z-index: -1;
+    opacity: .4;
 }
 </style>

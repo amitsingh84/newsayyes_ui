@@ -6,14 +6,15 @@
       </div>
 
       <div class="searchOptions">
-        <span
+        <!-- <span
           ><img src="../../../../assets/imgs/search.png" alt="search" />
           <input
             type="search"
             name="controllerSearch"
             id="controllerSearch"
             placeholder="Search in My Froms"
-        /></span>
+        /></span> -->
+        
       </div>
     </div>
   </div>
@@ -24,7 +25,7 @@ export default {
   data() {
     return {};
   },
-  props: ["title"],
+  props: ["title","button"],
 };
 </script>
 <style scoped>

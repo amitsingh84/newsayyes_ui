@@ -1,6 +1,6 @@
 <template>
   <div class="adminDashboard">
-    <header-slot :bgColor="'#b3b9ce'"> </header-slot>
+     <admin-header-nav bgColor="#b3b9ce"/>
     <admin-side-nav />
     <dashboard-slot>
       <div class="adminDashboardBlock">
@@ -110,12 +110,12 @@
 
 <script>
 import DashboardSlot from "../../../slots/DashboardSlot.vue";
-import HeaderSlot from "../../../slots/HeaderSlot.vue";
 import TestingChart from '../../controller/components/TestingChart.vue';
+import AdminHeaderNav from '../components/AdminHeaderNav.vue';
 import adminSideNav from "../components/adminSideNav.vue";
 import ShowAllUsers from "../components/ShowAllUsers.vue";
 export default {
-  components: { adminSideNav, HeaderSlot, DashboardSlot, ShowAllUsers, TestingChart },
+  components: { adminSideNav,  DashboardSlot, ShowAllUsers, TestingChart, AdminHeaderNav },
   data() {
     return {
       chartData: {
